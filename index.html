@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang ="en">
+  <head>
+    <meta charset="utf-8">
+    <title> The stripped Umbrella </title>
+    <link rel= "stylesheet" href= "menu_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <script>
+      let numOfCourses = +prompt("How many courses did you finish?",0)
+      if (Number.isInteger(numOfCourses)==false){
+        document.write("Invalid Input!")}
+      let courseMarks = []
+      for (let pas = 1; pas < numOfCourses+1; pas++){
+        let note = +prompt(" Enter your mark for course "+pas,0)
+        courseMarks.push(note);
+      }
+      for (let i = 1; i < courseMarks.length+1; i++){
+        document.write("mark for course "+i+" : "+courseMarks[i-1]+"<br />")
+      }
+      let total = 0
+      for (let i = 0; i < courseMarks.length; i++){
+        total += courseMarks[i]
+      }
+      let average = total/courseMarks.length
+      if(average >= 90 && average <=100){
+        document.write()
+      }
+      else if(average >= 90 && average <=100){
+        document.write("Your final average is"+average+". Your grade is A+")
+      }
+      else if(average >= 80 && average <=89){
+        document.write("Your final average is "+average+". Your grade is B")
+      }
+      else if(average >= 70 && average <=79){
+        document.write("Your final average is "+average+". Your grade is C")
+      }
+      else if(average >= 60 && average <=69){
+        document.write("Your final average is "+average+". Your grade is D")
+      }
+      else if(average < 60){
+        document.write("Your final average is "+average+". Your grade is F")
+      }
+      else{
+        document.write("Sorry, All the marks have to be from minimum 0 to maximum 100!")
+      }
+      
+    </script>
+  </body>
+</html>
